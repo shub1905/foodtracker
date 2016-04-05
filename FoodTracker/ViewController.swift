@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
-    //MARK: Properties
+    // MARK: Properties
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var textFieldName: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        textFieldName.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +25,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    //MARK: Action
-
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textFieldName.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        labelName.text = textFieldName.text
+    }
+    
+    // MARK: Action
     @IBAction func labelButton(sender: UIButton) {
         labelName.text = "Hudson"
     }
