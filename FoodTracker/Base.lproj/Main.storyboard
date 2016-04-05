@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dgn-RH-wzk">
-                                <rect key="frame" x="25" y="153" width="560" height="105"/>
+                                <rect key="frame" x="25" y="153" width="560" height="437"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nirvana for the Soul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYh-Bh-aUJ">
                                         <rect key="frame" x="0.0" y="0.0" width="151" height="21"/>
@@ -39,6 +40,12 @@
                                             <action selector="labelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2q-gQ-cSp"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPic" translatesAutoresizingMaskIntoConstraints="NO" id="ATn-9K-gNA">
+                                        <rect key="frame" x="0.0" y="117" width="320" height="320"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ATn-9K-gNA" secondAttribute="height" multiplier="1:1" id="CRW-6t-App"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="uJh-X1-e2z" secondAttribute="trailing" id="LJD-FX-sCx"/>
@@ -62,4 +69,7 @@
             <point key="canvasLocation" x="238" y="192"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPic" width="960" height="600"/>
+    </resources>
 </document>
