@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate,
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // MARK: Properties
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var imageSelection: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +38,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: Action
+    @IBAction func selectImageFromGallery(sender: UITapGestureRecognizer) {
+        textFieldName.resignFirstResponder()
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
     @IBAction func labelButton(sender: UIButton) {
-        labelName.text = "Hudson"
+        if textFieldName.text != "" {
+            labelName.text = textFieldName.text
+        }
+        else {
+            labelName.text = "Hudson"
+        }
     }
 }
 
