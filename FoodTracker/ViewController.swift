@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController, UITextFieldDelegate,
     UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -15,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var textFieldName: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    var imageAssetUrl: NSURL!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +47,18 @@ class ViewController: UIViewController, UITextFieldDelegate,
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = selectedImage
+        imageAssetUrl = info[UIImagePickerControllerReferenceURL] as! NSURL
+        let assetList = PHAsset.fetchAssetsWithALAssetURLs([imageAssetUrl], options: nil)
+        let asset = assetList.firstObject as! PHAsset
+        let asset_location = asset.location as CLLocation!
+        
+        let location_lat = asset_location.coordinate.latitude
+        let location_lon = asset_location.coordinate.longitude
+        
+        textFieldName.text = imageAssetUrl.absoluteString
+        print(location_lat)
+        print(location_lon)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     
