@@ -58,7 +58,94 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     @IBAction func labelButton(sender: UIButton) {
+        UploadRequest()
         labelName.text = "Hudson"
     }
+    
+    // MARK: Upload
+    func UploadRequest()
+    {
+        let url = NSURL(string: "http://localhost:8000/uploader/")
+        
+        let request = NSMutableURLRequest(URL: url!)
+        request.HTTPMethod = "POST"
+        
+        let boundary = generateBoundaryString()
+        
+        
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        
+        if (imageView.image == nil)
+        {
+            return
+        }
+        
+        let image_data = UIImagePNGRepresentation(imageView.image!)
+        
+        
+        if(image_data == nil)
+        {
+            return
+        }
+        
+        
+        let body = NSMutableData()
+        
+        let fname = "test.png"
+        let mimetype = "image/png"
+        
+        
+        
+        
+        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Disposition:form-data; name=\"test\"\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("hi\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        
+        body.appendData("--\(boundary)\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Disposition:form-data; name=\"image\"; filename=\"\(fname)\"\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData("Content-Type: \(mimetype)\r\n\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        body.appendData(image_data!)
+        body.appendData("\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        body.appendData("--\(boundary)--\r\n".dataUsingEncoding(NSUTF8StringEncoding)!)
+        
+        
+        
+        request.HTTPBody = body
+        
+        
+        
+        let session = NSURLSession.sharedSession()
+        
+        
+        let task = session.dataTaskWithRequest(request) {
+            (
+            let data, let response, let error) in
+            
+            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+                print("error")
+                return
+            }
+            
+            let dataString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            
+            print(dataString)
+            
+        }
+        
+        task.resume()
+        
+        
+    }
+    
+    
+    func generateBoundaryString() -> String
+    {
+        return "Boundary-\(NSUUID().UUIDString)"
+    }
+
 }
 
