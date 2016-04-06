@@ -40,14 +40,14 @@
                                             <action selector="labelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f2q-gQ-cSp"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPic" translatesAutoresizingMaskIntoConstraints="NO" id="ATn-9K-gNA">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jnF-1P-tIk">
                                         <rect key="frame" x="0.0" y="117" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="ATn-9K-gNA" secondAttribute="height" multiplier="1:1" id="CRW-6t-App"/>
+                                            <constraint firstAttribute="width" secondItem="jnF-1P-tIk" secondAttribute="height" multiplier="1:1" id="8e2-Vz-NCV"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="MY2-3g-x7p" appends="YES" id="Scg-XL-zuO"/>
+                                            <outletCollection property="gestureRecognizers" destination="2dH-Vz-zAU" appends="YES" id="870-kw-6ms"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -64,15 +64,15 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageSelection" destination="ATn-9K-gNA" id="SeX-nS-8Z1"/>
+                        <outlet property="imageView" destination="jnF-1P-tIk" id="9ql-ak-JoL"/>
                         <outlet property="labelName" destination="iYh-Bh-aUJ" id="69Z-dN-QC7"/>
                         <outlet property="textFieldName" destination="uJh-X1-e2z" id="5Og-vH-8EC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="MY2-3g-x7p">
+                <tapGestureRecognizer id="2dH-Vz-zAU">
                     <connections>
-                        <action selector="selectImageFromGallery:" destination="BYZ-38-t0r" id="J9P-yh-t61"/>
+                        <action selector="selectImageFromGallery:" destination="BYZ-38-t0r" id="Wiz-2j-73L"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -80,6 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultPic" width="960" height="600"/>
+        <image name="Image" width="540" height="540"/>
     </resources>
 </document>
