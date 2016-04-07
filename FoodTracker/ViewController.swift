@@ -72,31 +72,25 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     @IBAction func labelButton(sender: UIButton) {
-        UploadRequest()
+        let foo = Dictionary<String, String>()
+        UploadRequest(imageView.image!, metadata: foo)
         labelName.text = "Hudson"
     }
     
     // MARK: Upload
-    func UploadRequest()
+    func UploadRequest(image: UIImage,
+                       metadata: Dictionary<String, String>,
+                       localUrl: String = "http://localhost:8000/uploader/")
     {
-        let url = NSURL(string: "http://localhost:8000/uploader/")
+        let url = NSURL(string: localUrl)
         
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "POST"
         
         let boundary = generateBoundaryString()
-        
-        
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
-        if (imageView.image == nil)
-        {
-            return
-        }
-        
-        let image_data = UIImagePNGRepresentation(imageView.image!)
-        
-        
+        let image_data = UIImagePNGRepresentation(image)
         if(image_data == nil)
         {
             return
@@ -104,7 +98,6 @@ class ViewController: UIViewController, UITextFieldDelegate,
         
         
         let body = NSMutableData()
-        
         let fname = "test.png"
         let mimetype = "image/png"
         
@@ -133,7 +126,6 @@ class ViewController: UIViewController, UITextFieldDelegate,
         
         
         let session = NSURLSession.sharedSession()
-        
         
         let task = session.dataTaskWithRequest(request) {
             (
