@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         let location_lon = asset_location.coordinate.longitude
         
         textFieldName.text = imageAssetUrl.absoluteString
+        print(asset)
         print(location_lat)
         print(location_lon)
         
@@ -80,7 +81,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     // MARK: Upload
     func UploadRequest(image: UIImage,
                        metadata: Dictionary<String, String>,
-                       localUrl: String = "http://localhost:8000/uploader/")
+                       localUrl: String = "http://localhost:8000/api/upload/")
     {
         let url = NSURL(string: localUrl)
         
@@ -98,7 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         
         
         let body = NSMutableData()
-        let fname = "test.png"
+        let fname = "trial.png"
         let mimetype = "image/png"
         
         

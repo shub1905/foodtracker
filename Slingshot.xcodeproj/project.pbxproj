@@ -26,14 +26,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8EACD1951CB440DA00E8666F /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EACD1951CB440DA00E8666F /* Slingshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slingshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EACD1981CB440DA00E8666F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EACD19A1CB440DA00E8666F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EACD19D1CB440DA00E8666F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EACD19F1CB440DA00E8666F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EACD1A21CB440DA00E8666F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EACD1A41CB440DA00E8666F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EACD1A91CB440DA00E8666F /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EACD1A91CB440DA00E8666F /* Slingshot.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Slingshot.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EACD1AD1CB440DA00E8666F /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		8EACD1AF1CB440DA00E8666F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +59,7 @@
 		8EACD18C1CB440DA00E8666F = {
 			isa = PBXGroup;
 			children = (
-				8EACD1971CB440DA00E8666F /* FoodTracker */,
+				8EACD1971CB440DA00E8666F /* Slingshot */,
 				8EACD1AC1CB440DA00E8666F /* FoodTrackerTests */,
 				8EACD1961CB440DA00E8666F /* Products */,
 			);
@@ -68,13 +68,13 @@
 		8EACD1961CB440DA00E8666F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8EACD1951CB440DA00E8666F /* FoodTracker.app */,
-				8EACD1A91CB440DA00E8666F /* FoodTrackerTests.xctest */,
+				8EACD1951CB440DA00E8666F /* Slingshot.app */,
+				8EACD1A91CB440DA00E8666F /* Slingshot.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8EACD1971CB440DA00E8666F /* FoodTracker */ = {
+		8EACD1971CB440DA00E8666F /* Slingshot */ = {
 			isa = PBXGroup;
 			children = (
 				8EACD1981CB440DA00E8666F /* AppDelegate.swift */,
@@ -84,6 +84,7 @@
 				8EACD1A11CB440DA00E8666F /* LaunchScreen.storyboard */,
 				8EACD1A41CB440DA00E8666F /* Info.plist */,
 			);
+			name = Slingshot;
 			path = FoodTracker;
 			sourceTree = "<group>";
 		};
@@ -99,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8EACD1941CB440DA00E8666F /* FoodTracker */ = {
+		8EACD1941CB440DA00E8666F /* Slingshot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EACD1B21CB440DA00E8666F /* Build configuration list for PBXNativeTarget "FoodTracker" */;
+			buildConfigurationList = 8EACD1B21CB440DA00E8666F /* Build configuration list for PBXNativeTarget "Slingshot" */;
 			buildPhases = (
 				8EACD1911CB440DA00E8666F /* Sources */,
 				8EACD1921CB440DA00E8666F /* Frameworks */,
@@ -111,14 +112,14 @@
 			);
 			dependencies = (
 			);
-			name = FoodTracker;
+			name = Slingshot;
 			productName = FoodTracker;
-			productReference = 8EACD1951CB440DA00E8666F /* FoodTracker.app */;
+			productReference = 8EACD1951CB440DA00E8666F /* Slingshot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EACD1A81CB440DA00E8666F /* FoodTrackerTests */ = {
+		8EACD1A81CB440DA00E8666F /* SlingshotTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EACD1B51CB440DA00E8666F /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */;
+			buildConfigurationList = 8EACD1B51CB440DA00E8666F /* Build configuration list for PBXNativeTarget "SlingshotTests" */;
 			buildPhases = (
 				8EACD1A51CB440DA00E8666F /* Sources */,
 				8EACD1A61CB440DA00E8666F /* Frameworks */,
@@ -129,9 +130,9 @@
 			dependencies = (
 				8EACD1AB1CB440DA00E8666F /* PBXTargetDependency */,
 			);
-			name = FoodTrackerTests;
+			name = SlingshotTests;
 			productName = FoodTrackerTests;
-			productReference = 8EACD1A91CB440DA00E8666F /* FoodTrackerTests.xctest */;
+			productReference = 8EACD1A91CB440DA00E8666F /* Slingshot.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -154,7 +155,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8EACD1901CB440DA00E8666F /* Build configuration list for PBXProject "FoodTracker" */;
+			buildConfigurationList = 8EACD1901CB440DA00E8666F /* Build configuration list for PBXProject "Slingshot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -167,8 +168,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8EACD1941CB440DA00E8666F /* FoodTracker */,
-				8EACD1A81CB440DA00E8666F /* FoodTrackerTests */,
+				8EACD1941CB440DA00E8666F /* Slingshot */,
+				8EACD1A81CB440DA00E8666F /* SlingshotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,7 +217,7 @@
 /* Begin PBXTargetDependency section */
 		8EACD1AB1CB440DA00E8666F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8EACD1941CB440DA00E8666F /* FoodTracker */;
+			target = 8EACD1941CB440DA00E8666F /* Slingshot */;
 			targetProxy = 8EACD1AA1CB440DA00E8666F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -335,8 +336,8 @@
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shub1905.FoodTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shub1905.slingshot;
+				PRODUCT_NAME = Slingshot;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -350,8 +351,8 @@
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shub1905.FoodTracker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shub1905.slingshot;
+				PRODUCT_NAME = Slingshot;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -363,8 +364,8 @@
 				INFOPLIST_FILE = FoodTrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodTracker.app/FoodTracker";
+				PRODUCT_NAME = Slingshot;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slingshot.app/Slingshot";
 			};
 			name = Debug;
 		};
@@ -375,15 +376,15 @@
 				INFOPLIST_FILE = FoodTrackerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTrackerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodTracker.app/FoodTracker";
+				PRODUCT_NAME = Slingshot;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slingshot.app/Slingshot";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8EACD1901CB440DA00E8666F /* Build configuration list for PBXProject "FoodTracker" */ = {
+		8EACD1901CB440DA00E8666F /* Build configuration list for PBXProject "Slingshot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EACD1B01CB440DA00E8666F /* Debug */,
@@ -392,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EACD1B21CB440DA00E8666F /* Build configuration list for PBXNativeTarget "FoodTracker" */ = {
+		8EACD1B21CB440DA00E8666F /* Build configuration list for PBXNativeTarget "Slingshot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EACD1B31CB440DA00E8666F /* Debug */,
@@ -401,7 +402,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EACD1B51CB440DA00E8666F /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
+		8EACD1B51CB440DA00E8666F /* Build configuration list for PBXNativeTarget "SlingshotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8EACD1B61CB440DA00E8666F /* Debug */,
